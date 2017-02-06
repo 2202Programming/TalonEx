@@ -50,6 +50,10 @@ public class Robot extends IterativeRobot {
 		
 	}
 	
+	public void breaking(){
+        for (;true;) System.out.println("Hello, World");
+	}
+	
 	public void teleopInit(){
 		this.code_state++;
 		_talon.setEncPosition(0);
