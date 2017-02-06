@@ -9,7 +9,7 @@ import edu.wpi.first.wpilibj.Joystick;
 public class XboxController {
 	
 	private Joystick leftJoystick, rightJoystick;
-	private boolean teehee=true;
+	private boolean teehee=false;
 
 	/**
 	 * These are all magic number that the FRC toolchain uses. For some reason
@@ -103,9 +103,8 @@ public class XboxController {
 		// version
 		leftJoystick.setAxisChannel(Joystick.AxisType.kX, 4);
 		rightJoystick.setAxisChannel(Joystick.AxisType.kY, 5);
-		if (teehee) {
-			setRumble(0.1);
-		}
+		if (teehee) setRumble(0.2);
+		else setRumble(0.0);
 	}
 
 	// calls the update method
